@@ -6,8 +6,10 @@ const Layout = (props) => {
     return (
         <>
             <Header></Header>
-            <main className="min-h-20">
-                {props.children}
+            <main>
+                <div className="h-screen">
+                    {props.children}
+                </div>
             </main>
             <Footer></Footer>
         </>
