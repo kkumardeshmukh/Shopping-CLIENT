@@ -1,8 +1,11 @@
+import Layout from "./components/Layouts/Layout";
 
 function App() {
   return (
     <>
-      <h1 className='text-7xl text-center text-red-600'>krantikumar</h1>
+      <Layout>
+        <h1 className='text-2xl mt-0 text-red-600'>shopping app </h1>
+      </Layout>
     </>
 
   );
