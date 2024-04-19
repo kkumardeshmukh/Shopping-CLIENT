@@ -3,7 +3,7 @@ import React from 'react'
 const ForgotPassword = () => {
     return (
         <>
-            <div className="grid justify-center content-center h-screen overflow-y-auto bg-blue-50">
+            <div style={{ minHeight: "80vh" }} className="grid justify-center content-center overflow-y-auto">
                 <div style={{ boxShadow: "10px 5px 5px gray" }} className="w-80 h-fit bg-slate-200 mb-auto flex flex-col content-center rounded-xl justify-center">
                     <div className="mt-4 font-serif flex justify-center underline">
                         RESET PASSWORD
@@ -15,7 +15,7 @@ const ForgotPassword = () => {
                         <form className="w-full flex justify-center flex-col" action="">
                             {/* email */}
                             <div className="flex justify-center w-full">
-                                <input className="my-3 w-4/5 p-2 bg-transparent border-b-2 border-black focus:outline-none"
+                                <input className="my-1 w-4/5 p-1 bg-transparent border-b-2 border-black focus:outline-none"
                                     type="email"
                                     placeholder="Enter your Email"
                                     name='name'
@@ -23,7 +23,7 @@ const ForgotPassword = () => {
                             </div>
                             {/* answer */}
                             <div className="flex justify-center w-full">
-                                <input className="my-3 w-4/5 p-2 bg-transparent border-b-2 border-black focus:outline-none"
+                                <input className="my-1 w-4/5 p-1 bg-transparent border-b-2 border-black focus:outline-none"
                                     type="text"
                                     placeholder="Which is your fav. SPORT"
                                     name='name'
@@ -31,7 +31,7 @@ const ForgotPassword = () => {
                             </div>
                             {/* new password  */}
                             <div className="flex justify-center w-full">
-                                <input className="my-3 w-4/5 p-2 bg-transparent border-b-2 border-black focus:outline-none"
+                                <input className="my-1 w-4/5 p-1 bg-transparent border-b-2 border-black focus:outline-none"
                                     type="password"
                                     placeholder="Enter new Password"
                                     name='name'
