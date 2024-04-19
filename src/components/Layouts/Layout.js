@@ -6,8 +6,8 @@ const Layout = (props) => {
     return (
         <>
             <Header></Header>
-            <main>
-                <div className="h-screen">
+            <main style={{ maxHeight: "50%" }}>
+                <div className="overflow-y-auto">
                     {props.children}
                 </div>
             </main>

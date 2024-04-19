@@ -6,10 +6,10 @@ const Header = () => {
         <>
             <div className="h-12 content-center bg-slate-300 shadow-lg">
                 <div className="flex justify-between">
-                    <div className="ml-5 font-serif">SHOPPING APP</div>
-                    <div className="mr-5 flex flex-row">
-                        <ul className="font-semibold">
-                            <li className="inline px-3">Home</li>
+                    <div className="ml-5 font-serif text-2xl">SHOPPING APP</div>
+                    <div className="mr-5 grid content-center">
+                        <ul className="font-serif">
+                            <li className="inline px-3 pt-4">Home</li>
                             <li className="inline px-3">Catagories</li>
                             <li className="inline px-3">Register</li>
                             <li className="inline px-3">Login</li>
