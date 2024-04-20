@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const Registration = () => {
@@ -11,6 +12,8 @@ const Registration = () => {
     const [password, setPassword] = useState("")
     const [answer, setAnswer] = useState("")
 
+    const navigate = useNavigate()
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -19,7 +22,13 @@ const Registration = () => {
 
             console.log(res.data.user)
 
-            alert(res.data.message)
+            if (res.data.success) {
+                alert(res.data.message)
+                navigate("/login")
+            }
+            else {
+                alert(res.data.message)
+            }
 
 
         } catch (error) {
