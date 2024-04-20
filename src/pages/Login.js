@@ -5,7 +5,7 @@ const Login = () => {
     return (
         <>
             <div>
-                <div style={{ minHeight: "80vh" }} className="w-full grid justify-center content-center border-2 border-solid border-red-600 ">
+                <div style={{ minHeight: "80vh" }} className="w-full grid justify-center content-center ">
                     <div style={{ boxShadow: "10px 5px 5px gray" }} className="w-80 h-full bg-slate-200 mb-auto flex flex-col content-center rounded-xl justify-center ">
                         <div className="mt-4 font-serif flex justify-center underline">
                             LOGIN
