@@ -42,7 +42,7 @@ const Registration = () => {
     return (
         <>
             <div style={{ minHeight: "80vh" }} className="grid justify-center content-center overflow-y-auto ">
-                <div style={{ boxShadow: "10px 5px 5px gray" }} className="w-80 h-fit bg-slate-200 mt-10 mb-auto flex flex-col content-center rounded-xl">
+                <div style={{ boxShadow: "5px 5px 5px gray" }} className="w-80 h-fit bg-slate-200 mt-10 mb-auto flex flex-col content-center rounded-xl hover:bg-slate-300">
                     <div className="mt-4 font-serif flex justify-center underline">
                         REGISTER HERE
                     </div>
