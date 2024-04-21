@@ -2,7 +2,21 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { GiShoppingBag } from "react-icons/gi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useAuth } from '../../context/Auth';
+
 const Header = () => {
+
+    const [auth, setAuth] = useAuth()
+
+    const handleLogout = () => {
+        setAuth({
+            ...auth,
+            user: null,
+            token: ""
+        })
+        localStorage.removeItem('auth')
+    }
+
     return (
 
         <>
@@ -17,8 +31,16 @@ const Header = () => {
                         <ul className="font-serif md:flex mb-4 hidden">
                             <li className="px-3 pt-4"><NavLink to='/'>Home</NavLink></li>
                             <li className="px-3 pt-4"><NavLink to='#'>Catagories</NavLink></li>
-                            <li className="px-3 pt-4"><NavLink to='/register'>Register</NavLink></li>
-                            <li className="px-3 pt-4"><NavLink to='/login'>Login</NavLink></li>
+
+                            {!auth.user ?
+                                (<>
+                                    <li className="px-3 pt-4"><NavLink to='/register'>Register</NavLink></li>
+                                    <li className="px-3 pt-4"><NavLink to='/login'>Login</NavLink></li>
+                                </>) :
+                                (<>
+                                    <li className="px-3 pt-4"><NavLink to='/login' onClick={handleLogout}>Logout</NavLink></li>
+
+                                </>)}
                             <li className="px-3 pt-4"><NavLink to='#'>Cart(0)</NavLink></li>
                         </ul>
                     </div>
