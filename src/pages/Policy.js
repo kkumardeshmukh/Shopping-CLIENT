@@ -1,8 +1,9 @@
 import React from 'react'
+import Layout from '../components/Layouts/Layout'
 
 const Policy = () => {
     return (
-        <>
+        <Layout>
             <div style={{ minHeight: "80vh" }} className="grid content-center justify-center">
                 <div className="max-w-[50rem] max-h-80 ">
                     <div className="bg-slate-800 text-white py-5 text-center mb-2 relative z-10">PRIVACY POLICY</div>
@@ -11,7 +12,7 @@ const Policy = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 

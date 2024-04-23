@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-import axios, { formToJSON } from 'axios'
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/Auth'
+import Layout from '../components/Layouts/Layout'
+
 
 const Login = () => {
 
     const navigate = useNavigate()
+    const location = useLocation()
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -26,7 +29,7 @@ const Login = () => {
                 token: res.data.token
             })
             localStorage.setItem('auth', JSON.stringify(res.data))
-            navigate("/")
+            navigate(location.state || "/")
 
         } catch (error) {
 
@@ -40,7 +43,7 @@ const Login = () => {
 
 
     return (
-        <>
+        <Layout>
             <div>
                 <div style={{ minHeight: "80vh" }} className="w-full grid justify-center content-center ">
                     <div style={{ boxShadow: "5px 5px 5px gray" }} className="w-80 h-full bg-slate-200 mb-auto flex flex-col content-center rounded-xl justify-center ">
@@ -81,7 +84,7 @@ const Login = () => {
                 </div>
             </div>
 
-        </>
+        </Layout>
     )
 }
 
