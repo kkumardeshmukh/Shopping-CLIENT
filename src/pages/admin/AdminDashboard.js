@@ -14,8 +14,8 @@ const AdminDashboard = () => {
 
                     <div className="col-md-3 mt-3"><Adminmenu /></div>
                     <div className="col-md-9">
-                        <div class="card mt-5 w-75">
-                            <div class="card-body">
+                        <div className="card mt-5 w-75">
+                            <div className="card-body">
                                 <p>ADMIN NAME: {auth?.user?.name}</p>
                                 <p>ADMIN EMAIL: {auth?.user?.email}</p>
                                 <p>ADMIN PHONE NO.: {auth?.user?.phone}</p>
