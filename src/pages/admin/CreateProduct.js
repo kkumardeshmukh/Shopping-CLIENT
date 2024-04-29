@@ -10,7 +10,7 @@ const CreateProduct = () => {
                 <div className="row">
 
                     <div className="col-md-3 mt-3"><Adminmenu /></div>
-                    <div className="col-md-9">Create category</div>
+                    <div className="col-md-9">Create Product</div>
                 </div>
             </div>
         </Layout>
