@@ -78,7 +78,7 @@ const CreateCategory = () => {
 
             const { data } = await axios.get('http://localhost:8080/api/v1/category/get-category')
             console.log(data)
-            if (data.success) {
+            if (data?.success) {
                 setCategory(data.Categories)
             }
         }
@@ -98,7 +98,7 @@ const CreateCategory = () => {
 
                     <div className="col-md-3 mt-3"><Adminmenu /></div>
                     <div className="col-md-9 ">
-                        <div className="text-2xl font-semibold mt-[0.9rem]">
+                        <div className="text-2xl font-semibold mt-[0.9rem] mb-4">
                             CATEGORIES
                         </div>
                         <div>
